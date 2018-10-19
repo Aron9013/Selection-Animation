@@ -2,6 +2,7 @@
 
 .finance-card {
   width: 50%;
+  overflow: hidden;
 }
 
 @include media-breakpoint-down(md) {

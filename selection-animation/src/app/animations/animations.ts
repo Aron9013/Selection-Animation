@@ -1,4 +1,4 @@
-import {animate, keyframes, state, style, transition, trigger} from "@angular/animations";
+import {animate, group, keyframes, state, style, transition, trigger} from "@angular/animations";
 
 export const Animations = {
   toggleText: trigger('toggleText', [
@@ -39,15 +39,17 @@ export const Animations = {
       display: 'none'
     })),
     transition('visible => hidden', [
-      animate(600, keyframes([
-        style({ opacity: 1, offset: 0 }),
-        style({ opacity: 0, offset: 0.5 }),
-        style({ transform: 'translateY(-50px)', offset: 0.5 }),
-        style({ height: '*', offset: 0.5 }),
-        style({ width: '*', offset: 0.5 }),
-        style({ height: '0', offset: 1 }),
-        style({ width: '0', offset: 1 }),
-      ]))
+      group([
+        animate('300ms linear', style({
+          opacity: '0',
+          transform: 'translateY(-50px)',
+        })),
+        animate('500ms 300ms linear', style({
+          height: '0',
+          width: '0',
+          display: 'none'
+        }))
+      ])
     ])
   ]),
 
