@@ -1,0 +1,11 @@
+@import '~bootstrap/scss/bootstrap-grid.scss';
+
+.finance-card {
+  width: 50%;
+}
+
+@include media-breakpoint-down(md) {
+  .finance-card {
+    width: 100%;
+  }
+}

@@ -1,0 +1,35 @@
+@import '~bootstrap/scss/bootstrap-grid.scss';
+
+.card-container {
+  background: white;
+  border-radius: 4px;
+  height: 620px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .finance-image {
+    height: 320px;
+  }
+
+  .text-container {
+    overflow: hidden;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .card-container {
+    .finance-image {
+      height: 350px;
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .card-container {
+    .finance-image {
+      height: 200px;
+    }
+  }
+}
