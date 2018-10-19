@@ -1,5 +1,5 @@
 <div class="d-flex flex-column p-4 card-container" (click)="selectFinanceType()" [@toggleCard]="cardToggle">
-  <img [src]=financeType.image [alt]="financeType.name" class="w-100 finance-image">
+  <img [src]=financeType.image [alt]="financeType.name" class="finance-image">
   <div class="text-container" [@toggleText]="textToggle">
     <h2 class="my-4">{{financeType.name}}</h2>
     <p>{{financeType.description}}</p>

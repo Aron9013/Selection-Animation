@@ -1,3 +1,9 @@
 <div class="d-flex flex-wrap container">
-    <finance-type-card *ngFor="let financeType of financeTypes" [financeType]="financeType" class="p-4 finance-card"></finance-type-card>
+    <finance-type-card *ngFor="let financeType of financeTypes"
+                       [financeType]="financeType"
+                       class="p-4 finance-card"
+                        (financeTypeClicked)="onClicked($event)"
+                        [ngClass]="{'selected': financeType.isSelected}"
+                        [@hideCard]="financeType.isVisible ? 'visible' : 'hidden'">
+    </finance-type-card>
 </div>

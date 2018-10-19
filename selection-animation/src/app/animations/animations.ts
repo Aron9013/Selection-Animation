@@ -27,5 +27,19 @@ export const Animations = {
         style({ width: '100%', offset: 0.7 }),
       ]))
     ])
+  ]),
+
+  hideCard: trigger('hideCard', [
+    state('visible', style({
+      opacity: '1'
+    })),
+    state('hidden', style({
+      opacity: '0',
+      transform: 'translateY(-50px)',
+      display: 'none'
+    })),
+    transition('visible => hidden', [
+      animate(300)
+    ])
   ])
 };

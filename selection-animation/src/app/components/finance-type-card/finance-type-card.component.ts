@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {IFinanceDataType} from "../../types/finance-data.type";
 import {Animations} from "../../animations/animations";
 
@@ -14,12 +14,15 @@ import {Animations} from "../../animations/animations";
 
 export class FinanceTypeCardComponent {
   @Input() public financeType: IFinanceDataType;
+  @Output() public financeTypeClicked: EventEmitter<string> = new EventEmitter<string>();
+
   public textToggle: string = 'open';
   public cardToggle: string = 'open';
 
   public selectFinanceType(): void {
     this.textToggle = (this.textToggle === 'open' ? 'close' : 'open');
     this.cardToggle = (this.cardToggle === 'open' ? 'close' : 'open');
+    this.financeTypeClicked.emit(this.financeType.id);
   }
 
 }

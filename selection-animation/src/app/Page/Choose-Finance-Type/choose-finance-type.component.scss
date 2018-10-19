@@ -2,6 +2,12 @@
 
 .finance-card {
   width: 50%;
+
+  &.selected {
+    transition: width 300ms;
+    transition-delay: 300ms;
+    width: 100%;
+  }
 }
 
 @include media-breakpoint-down(md) {
