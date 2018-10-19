@@ -8,7 +8,8 @@ import {Animations} from "../../animations/animations";
   templateUrl: 'choose-finance-type.component.html',
   styleUrls: ['choose-finance-type.component.scss'],
   animations: [
-    Animations.hideCard
+    Animations.hideCard,
+    Animations.expandCard,
   ]
 })
 
@@ -32,16 +33,15 @@ export class ChooseFinanceTypeComponent implements OnInit {
         financeType.isVisible = false;
       }
       if (financeType.id === financeTypeId) {
-        financeType.isSelected = true;
         this._selectedFinanceTypeId = financeType.id;
       }
     }
   }
 
-  public removeCard(): void {
+  public expandCard(): void {
     for (let financeType of this.financeTypes) {
-      if (financeType.id !== this._selectedFinanceTypeId) {
-        financeType.isDisplayed = false;
+      if (financeType.id === this._selectedFinanceTypeId) {
+        financeType.isSelected = true;
       }
     }
   }

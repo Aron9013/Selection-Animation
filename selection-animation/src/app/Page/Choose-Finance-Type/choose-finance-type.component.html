@@ -2,8 +2,9 @@
     <finance-type-card *ngFor="let financeType of financeTypes"
                        [financeType]="financeType"
                        class="p-4 finance-card"
-                        (financeTypeClicked)="onClicked($event)"
-                        [ngClass]="{'selected': financeType.isSelected}"
-                        [@hideCard]="financeType.isVisible ? 'visible' : 'hidden'">
+                       (financeTypeClicked)="onClicked($event)"
+                       [@hideCard]="financeType.isVisible ? 'visible' : 'hidden'"
+                       (@hideCard.done)="expandCard()"
+                       [@expandCard]="financeType.isSelected ? 'expand' : 'initial'">
     </finance-type-card>
 </div>
