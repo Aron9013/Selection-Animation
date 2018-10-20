@@ -6,7 +6,8 @@ export const Animations = {
         height: '*'
       })),
       state('close', style({
-        height: '0'
+        height: '0',
+        display: 'none'
       })),
       transition('open <=> close', [
         animate(300)
@@ -36,7 +37,7 @@ export const Animations = {
       transform: 'translateY(-50px)',
       display: 'none'
     })),
-    transition('visible <=> hidden', [
+    transition('visible => hidden', [
       animate(300)
     ])
   ]),
@@ -45,14 +46,16 @@ export const Animations = {
     state('start', style({
       position: 'relative',
       top: '*',
-      left: '*'
+      left: '*',
+      width: '*'
     })),
     state('end', style({
       position: 'relative',
       top: '0',
-      left: '0'
+      left: '0',
+      width: '100%'
     })),
-    transition('start <=> end', [
+    transition('start => end', [
       animate(500, keyframes([
         style({top: '*', offset: 0}),
         style({left: '*', offset: 0}),
@@ -71,7 +74,22 @@ export const Animations = {
     state('expand', style({
       width: '100%'
     })),
-    transition('initial <=> expand', [
+    transition('initial => expand', [
+      animate(300)
+    ])
+  ]),
+
+  expandContent: trigger('expandContent', [
+    state('initial', style({
+      width: '0%'
+    })),
+    state('expand', style({
+      width: '*'
+    })),
+    transition('initial => expand', [
+      animate('300ms 100ms')
+    ]),
+    transition('expand => initial', [
       animate(300)
     ])
   ]),

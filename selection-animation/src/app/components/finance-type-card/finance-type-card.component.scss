@@ -11,7 +11,7 @@
 
   &.isOpened {
     pointer-events: none;
-    
+
     &:hover {
       cursor: default;
     }
@@ -29,6 +29,11 @@
     }
 
     .text-container {
+      overflow: hidden;
+    }
+
+    .button-container {
+      pointer-events: all;
       overflow: hidden;
     }
   }

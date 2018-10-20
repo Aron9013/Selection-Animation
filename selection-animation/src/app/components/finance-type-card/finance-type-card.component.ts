@@ -14,6 +14,7 @@ import {FinanceCardUiService} from "../../services/finance-card.ui.service";
     Animations.hideCard,
     Animations.moveCard,
     Animations.expandCard,
+    Animations.expandContent,
   ]
 })
 
@@ -48,28 +49,31 @@ export class FinanceTypeCardComponent implements OnInit {
 
     this.cardToggle = (this.cardToggle === 'open' ? 'close' : 'open');
 
-    this.hideOtherCards(financeTypeId);
+    this._selectedFinanceTypeId = financeTypeId;
+
+    this.hideOtherCards();
   }
 
   public moveCard(): void {
     for (let financeType of this.financeTypes) {
       if (financeType.id === this._selectedFinanceTypeId) {
-        financeType.isSelected = true;
+        financeType.isSelected = !financeType.isSelected;
       }
     }
   }
 
   public expandCard(): void {
-    this.expandToggle = (this.expandToggle === 'initial' ? 'expand' : 'initial')
+    this.expandToggle = (this.expandToggle === 'initial' ? 'expand' : 'initial');
   }
 
-  private hideOtherCards(financeTypeId: string) {
+  public backToSelection(): void {
+
+  }
+
+  private hideOtherCards() {
     for (let financeType of this.financeTypes) {
-      if (financeType.id !== financeTypeId) {
-        financeType.isVisible = false;
-      }
-      if (financeType.id === financeTypeId) {
-        this._selectedFinanceTypeId = financeType.id;
+      if (financeType.id !== this._selectedFinanceTypeId) {
+        financeType.isVisible = !financeType.isVisible;
       }
     }
   }
