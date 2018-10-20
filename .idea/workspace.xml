@@ -24,11 +24,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="finance-type-card.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="finance-type-card.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/selection-animation/src/app/components/finance-type-card/finance-type-card.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="795">
-              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+            <state relative-caret-position="845">
+              <caret line="67" column="45" lean-forward="true" selection-start-line="67" selection-start-column="45" selection-end-line="67" selection-end-column="45" />
               <folding>
                 <element signature="e#0#60#0" expanded="true" />
               </folding>
@@ -36,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="choose-finance-type.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/selection-animation/src/app/Page/Choose-Finance-Type/choose-finance-type.component.html">
+      <file leaf-file-name="animations.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/selection-animation/src/app/animations/animations.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+            <state relative-caret-position="730">
+              <caret line="54" column="23" lean-forward="false" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -56,21 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="animations.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/selection-animation/src/app/animations/animations.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="39" column="17" lean-forward="false" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="finance-type-card.component.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="finance-type-card.component.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/selection-animation/src/app/components/finance-type-card/finance-type-card.component.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="299">
+              <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -79,8 +69,8 @@
       <file leaf-file-name="finance-type-card.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/selection-animation/src/app/components/finance-type-card/finance-type-card.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+            <state relative-caret-position="92">
+              <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -111,13 +101,13 @@
         <option value="$PROJECT_DIR$/selection-animation/src/app/mock-data/finance-type-data.mock.ts" />
         <option value="$PROJECT_DIR$/selection-animation/src/app/Page/Choose-Finance-Type/choose-finance-type.component.scss" />
         <option value="$PROJECT_DIR$/selection-animation/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/selection-animation/src/app/components/finance-type-card/finance-type-card.component.scss" />
-        <option value="$PROJECT_DIR$/selection-animation/src/app/components/finance-type-card/finance-type-card.component.html" />
         <option value="$PROJECT_DIR$/selection-animation/src/app/Page/Choose-Finance-Type/choose-finance-type.component.ts" />
         <option value="$PROJECT_DIR$/selection-animation/src/app/Page/Choose-Finance-Type/choose-finance-type.component.html" />
         <option value="$PROJECT_DIR$/selection-animation/src/app/services/finance-card.ui.service.ts" />
         <option value="$PROJECT_DIR$/selection-animation/src/app/animations/animations.ts" />
         <option value="$PROJECT_DIR$/selection-animation/src/app/components/finance-type-card/finance-type-card.component.ts" />
+        <option value="$PROJECT_DIR$/selection-animation/src/app/components/finance-type-card/finance-type-card.component.html" />
+        <option value="$PROJECT_DIR$/selection-animation/src/app/components/finance-type-card/finance-type-card.component.scss" />
       </list>
     </option>
   </component>
@@ -280,12 +270,12 @@
       <option name="presentableId" value="Default" />
       <updated>1539972553616</updated>
       <workItem from="1539972555061" duration="18173000" />
-      <workItem from="1540026831484" duration="6410000" />
+      <workItem from="1540026831484" duration="7717000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24583000" />
+    <option name="totallyTimeSpent" value="25890000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1734" height="1407" extended-state="0" />
@@ -445,18 +435,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/selection-animation/src/app/components/finance-type-card/finance-type-card.component.scss">
+    <entry file="file://$PROJECT_DIR$/selection-animation/src/app/Page/Choose-Finance-Type/choose-finance-type.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/selection-animation/src/app/components/finance-type-card/finance-type-card.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        <state relative-caret-position="0">
+          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -469,18 +451,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/selection-animation/src/app/Page/Choose-Finance-Type/choose-finance-type.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/selection-animation/src/app/animations/animations.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="39" column="17" lean-forward="false" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+        <state relative-caret-position="730">
+          <caret line="54" column="23" lean-forward="false" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -495,11 +469,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/selection-animation/src/app/components/finance-type-card/finance-type-card.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+        <state relative-caret-position="845">
+          <caret line="67" column="45" lean-forward="true" selection-start-line="67" selection-start-column="45" selection-end-line="67" selection-end-column="45" />
           <folding>
             <element signature="e#0#60#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selection-animation/src/app/components/finance-type-card/finance-type-card.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selection-animation/src/app/components/finance-type-card/finance-type-card.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>

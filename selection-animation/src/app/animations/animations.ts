@@ -22,7 +22,7 @@ export const Animations = {
       height: '400px',
       width: '100%'
     })),
-    transition('open => close', [
+    transition('open <=> close', [
       animate(300)
     ])
   ]),
@@ -36,7 +36,7 @@ export const Animations = {
       transform: 'translateY(-50px)',
       display: 'none'
     })),
-    transition('visible => hidden', [
+    transition('visible <=> hidden', [
       animate(300)
     ])
   ]),
@@ -52,7 +52,7 @@ export const Animations = {
       top: '0',
       left: '0'
     })),
-    transition('start => end', [
+    transition('start <=> end', [
       animate(500, keyframes([
         style({top: '*', offset: 0}),
         style({left: '*', offset: 0}),
@@ -71,7 +71,7 @@ export const Animations = {
     state('expand', style({
       width: '100%'
     })),
-    transition('initial => expand', [
+    transition('initial <=> expand', [
       animate(300)
     ])
   ]),
