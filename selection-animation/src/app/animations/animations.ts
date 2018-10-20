@@ -56,26 +56,16 @@ export const Animations = {
       width: '100%'
     })),
     transition('start => end', [
-      animate(500, keyframes([
+      animate(600, keyframes([
         style({top: '*', offset: 0}),
         style({left: '*', offset: 0}),
+        style({width: '*', offset: 0}),
         style({top: '{{ cardYPosition }}', offset: 0.1}),
         style({left: '{{ cardXPosition }}', offset: 0.1}),
+        style({width: '100%', offset: 1}),
         style({top: '0', offset: 1}),
         style({left: '0', offset: 1}),
       ]))
-    ])
-  ]),
-
-  expandCard: trigger('expandCard', [
-    state('initial', style({
-      width: '*'
-    })),
-    state('expand', style({
-      width: '100%'
-    })),
-    transition('initial => expand', [
-      animate(300)
     ])
   ]),
 
@@ -87,10 +77,22 @@ export const Animations = {
       width: '*'
     })),
     transition('initial => expand', [
-      animate('300ms 100ms')
+      animate('400ms 200ms')
     ]),
     transition('expand => initial', [
       animate(300)
-    ])
+    ]),
   ]),
+
+    // expandCard: trigger('expandCard', [
+    //   state('initial', style({
+    //     width: '*'
+    //   })),
+    //   state('expand', style({
+    //     width: '100%'
+    //   })),
+    //   transition('initial => expand', [
+    //     animate(300)
+    //   ])
+    // ])
 };

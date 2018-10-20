@@ -13,7 +13,6 @@ import {FinanceCardUiService} from "../../services/finance-card.ui.service";
     Animations.toggleCard,
     Animations.hideCard,
     Animations.moveCard,
-    Animations.expandCard,
     Animations.expandContent,
   ]
 })
@@ -22,7 +21,6 @@ export class FinanceTypeCardComponent implements OnInit {
   public financeTypes: Array<IFinanceDataType> = [];
 
   public cardToggle: string = 'open';
-  public expandToggle: string = 'initial';
 
   public cardXPosition: string;
   public cardYPosition: string;
@@ -60,14 +58,6 @@ export class FinanceTypeCardComponent implements OnInit {
         financeType.isSelected = !financeType.isSelected;
       }
     }
-  }
-
-  public expandCard(): void {
-    this.expandToggle = (this.expandToggle === 'initial' ? 'expand' : 'initial');
-  }
-
-  public backToSelection(): void {
-
   }
 
   private hideOtherCards() {
