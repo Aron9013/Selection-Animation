@@ -33,8 +33,12 @@
     }
 
     .button-container {
-      pointer-events: all;
       overflow: hidden;
+
+      button {
+        pointer-events: auto;
+        opacity: 0;
+      }
     }
   }
 }

@@ -70,29 +70,21 @@ export const Animations = {
   ]),
 
   expandContent: trigger('expandContent', [
-    state('initial', style({
-      width: '0%'
+    state('start', style({
+      width: '0%',
+      opacity: '0',
+      display: 'none'
     })),
-    state('expand', style({
-      width: '*'
+    state('end', style({
+      width: '100%',
+      opacity: '1',
+      display: 'block'
     })),
-    transition('initial => expand', [
+    transition('start => end', [
       animate('400ms 200ms')
     ]),
-    transition('expand => initial', [
+    transition('end => start', [
       animate(300)
     ]),
   ]),
-
-    // expandCard: trigger('expandCard', [
-    //   state('initial', style({
-    //     width: '*'
-    //   })),
-    //   state('expand', style({
-    //     width: '100%'
-    //   })),
-    //   transition('initial => expand', [
-    //     animate(300)
-    //   ])
-    // ])
 };

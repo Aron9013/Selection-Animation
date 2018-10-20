@@ -60,6 +60,9 @@ export class FinanceTypeCardComponent implements OnInit {
     }
   }
 
+  public backToSelection(): void {
+  }
+
   private hideOtherCards() {
     for (let financeType of this.financeTypes) {
       if (financeType.id !== this._selectedFinanceTypeId) {

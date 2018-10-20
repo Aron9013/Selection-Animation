@@ -9,8 +9,10 @@
     <div class="d-flex flex-column p-4 card-container" [@toggleCard]="cardToggle">
       <div class="d-flex justify-content-between">
         <img [src]="financeType.image" [alt]="financeType.name" class="finance-image">
-        <div class="button-container d-flex justify-content-end" [@expandContent]="financeType.isSelected ? 'end' : 'start'">
-          <button class="btn btn-primary back-to-selection align-self-end">Back to Selection</button>
+        <div class="button-container d-flex justify-content-end">
+          <button class="btn btn-primary back-to-selection align-self-end" (click)="backToSelection()" [@expandContent]="financeType.isSelected ? 'end' : 'start'">
+            Back to Selection
+          </button>
         </div>
       </div>
       <div class="text-container" [@toggleText]="cardToggle">
