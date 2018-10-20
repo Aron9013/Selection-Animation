@@ -1,7 +1,18 @@
-<div class="d-flex flex-column p-4 card-container" (click)="selectFinanceType()" [@toggleCard]="cardToggle">
-  <img [src]=financeType.image [alt]="financeType.name" class="finance-image">
-  <div class="text-container" [@toggleText]="textToggle">
-    <h2 class="my-4">{{financeType.name}}</h2>
-    <p>{{financeType.description}}</p>
+<div class="d-flex flex-wrap">
+  <div *ngFor="let financeType of financeTypes"
+       class="p-4 finance-card"
+       (click)="selectFinanceType(financeType.id, $event)"
+       [@hideCard]="financeType.isVisible ? 'visible' : 'hidden'"
+       (@hideCard.done)="moveCard()"
+       [@moveCard]="{ value: financeType.isSelected ? 'end' : 'start', params: {cardXPosition: cardXPosition, cardYPosition: cardYPosition}}"
+       (@moveCard.done)="expandCard()"
+       [@expandCard]="expandToggle">
+    <div class="d-flex flex-column p-4 card-container" [@toggleCard]="cardToggle">
+      <img [src]=financeType.image [alt]="financeType.name" class="finance-image">
+      <div class="text-container" [@toggleText]="cardToggle">
+        <h2 class="my-4">{{financeType.name}}</h2>
+        <p>{{financeType.description}}</p>
+      </div>
+    </div>
   </div>
 </div>

@@ -7,6 +7,7 @@ import {ChooseFinanceTypeComponent} from "./Page/Choose-Finance-Type/choose-fina
 import {FinanceTypeDataMock} from "./mock-data/finance-type-data.mock";
 import {FinanceTypeCardComponent} from "./components/finance-type-card/finance-type-card.component";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {FinanceCardUiService} from "./services/finance-card.ui.service";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     BrowserAnimationsModule,
   ],
   providers: [
-    FinanceTypeDataMock
+    FinanceTypeDataMock,
+    FinanceCardUiService
   ],
   bootstrap: [AppComponent]
 })

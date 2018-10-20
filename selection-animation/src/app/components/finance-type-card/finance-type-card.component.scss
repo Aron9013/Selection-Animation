@@ -1,36 +1,53 @@
 @import '~bootstrap/scss/bootstrap-grid.scss';
 
-.card-container {
-  background: white;
-  border-radius: 4px;
-  height: 620px;
+
+.finance-card {
+  width: 50%;
+  overflow: hidden;
 
   &:hover {
     cursor: pointer;
   }
 
-  .finance-image {
-    height: 320px;
-    width: 370px;
-  }
+  .card-container {
+    background: white;
+    border-radius: 4px;
+    height: 620px;
+    pointer-events: none;
 
-  .text-container {
-    overflow: hidden;
+    .finance-image {
+      height: 320px;
+      width: 370px;
+    }
+
+    .text-container {
+      overflow: hidden;
+    }
   }
 }
 
 @include media-breakpoint-down(md) {
-  .card-container {
-    .finance-image {
-      height: 350px;
+  .finance-card {
+    width: 100%;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .finance-card {
+    .card-container {
+      .finance-image {
+        height: 350px;
+      }
     }
   }
 }
 
 @include media-breakpoint-down(xs) {
-  .card-container {
-    .finance-image {
-      height: 200px;
+  .finance-card {
+    .card-container {
+      .finance-image {
+        height: 200px;
+      }
     }
   }
 }
