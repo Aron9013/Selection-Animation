@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {IFinanceDataType} from "../../types/finance-data.type";
 import {Animations} from "../../animations/animations";
 import {FinanceTypeDataMock} from "../../mock-data/finance-type-data.mock";
@@ -28,20 +28,21 @@ export class FinanceTypeCardComponent implements OnInit {
   private _financeDataTypeMock: FinanceTypeDataMock;
   private _selectedFinanceTypeId: string;
   private _financeCardUiService: FinanceCardUiService;
-  private _elRef: ElementRef;
 
-  constructor(financeDataTypeMock: FinanceTypeDataMock, financeCardUiService: FinanceCardUiService, elRef: ElementRef) {
+  constructor(financeDataTypeMock: FinanceTypeDataMock, financeCardUiService: FinanceCardUiService) {
     this._financeDataTypeMock = financeDataTypeMock;
     this._financeCardUiService = financeCardUiService;
-    this._elRef = elRef;
   }
 
   ngOnInit() {
     this.financeTypes = this._financeDataTypeMock.Data;
   }
 
-  public selectFinanceType(financeTypeId: string, event: Event): void {
-    this._financeCardUiService.calculateCardCoordinates(event.target, this._elRef);
+  public selectFinanceType(financeTypeId: string, event: any): void {
+    if (!event.target.classList.contains('finance-card')) {
+      return;
+    }
+    this._financeCardUiService.calculateCardCoordinates(event.target);
     this.cardXPosition = this._financeCardUiService.cardXPosition + 'px';
     this.cardYPosition = this._financeCardUiService.cardYPosition + 'px';
 
@@ -50,6 +51,13 @@ export class FinanceTypeCardComponent implements OnInit {
     this._selectedFinanceTypeId = financeTypeId;
 
     this.hideOtherCards();
+    this.moveCard()
+  }
+
+  public backToSelection(): void {
+    this.moveCard()
+    this.hideOtherCards();
+    this.cardToggle = (this.cardToggle === 'open' ? 'close' : 'open');
   }
 
   public moveCard(): void {
@@ -60,9 +68,6 @@ export class FinanceTypeCardComponent implements OnInit {
     }
   }
 
-  public backToSelection(): void {
-  }
-
   private hideOtherCards() {
     for (let financeType of this.financeTypes) {
       if (financeType.id !== this._selectedFinanceTypeId) {
@@ -70,5 +75,6 @@ export class FinanceTypeCardComponent implements OnInit {
       }
     }
   }
+
 
 }

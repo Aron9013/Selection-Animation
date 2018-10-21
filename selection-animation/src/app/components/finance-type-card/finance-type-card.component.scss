@@ -1,6 +1,5 @@
 @import '~bootstrap/scss/bootstrap-grid.scss';
 
-
 .finance-card {
   width: 50%;
   overflow: hidden;
@@ -24,12 +23,10 @@
     pointer-events: none;
 
     .finance-image {
+      position: relative;
+      z-index: 1000;
       height: 320px;
       width: 370px;
-    }
-
-    .text-container {
-      overflow: hidden;
     }
 
     .button-container {
@@ -39,6 +36,10 @@
         pointer-events: auto;
         opacity: 0;
       }
+    }
+
+    .text-container {
+      overflow: hidden;
     }
   }
 }

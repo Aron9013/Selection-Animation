@@ -9,8 +9,11 @@ export const Animations = {
         height: '0',
         display: 'none'
       })),
-      transition('open <=> close', [
+      transition('open => close', [
         animate(300)
+      ]),
+      transition('close => open', [
+        animate('300ms 900ms linear')
       ])
     ]),
 
@@ -23,14 +26,18 @@ export const Animations = {
       height: '400px',
       width: '100%'
     })),
-    transition('open <=> close', [
+    transition('open => close', [
       animate(300)
+    ]),
+    transition('close => open', [
+      animate('300ms 900ms linear')
     ])
   ]),
 
   hideCard: trigger('hideCard', [
     state('visible', style({
       opacity: '1',
+      display: 'block'
     })),
     state('hidden', style({
       opacity: '0',
@@ -39,6 +46,9 @@ export const Animations = {
     })),
     transition('visible => hidden', [
       animate(300)
+    ]),
+    transition('hidden => visible', [
+      animate('300ms 600ms linear')
     ])
   ]),
 
@@ -56,7 +66,7 @@ export const Animations = {
       width: '100%'
     })),
     transition('start => end', [
-      animate(600, keyframes([
+      animate('600ms 300ms linear', keyframes([
         style({top: '*', offset: 0}),
         style({left: '*', offset: 0}),
         style({width: '*', offset: 0}),
@@ -66,6 +76,20 @@ export const Animations = {
         style({top: '0', offset: 1}),
         style({left: '0', offset: 1}),
       ]))
+    ]),
+    transition('end => start', [
+      animate(600, keyframes([
+        style({position: 'absolute', offset: 0}),
+        style({top: '0', offset: 0}),
+        style({left: '0', offset: 0}),
+        style({width: '100%', offset: 0}),
+        style({top: '{{ cardYPosition }}', offset: 0.9}),
+        style({left: '{{ cardXPosition }}', offset: 0.9}),
+        style({width: '*', offset: 1}),
+        style({top: '*', offset: 1}),
+        style({left: '*', offset: 1}),
+        style({position: 'relative', offset: 1}),
+      ]))
     ])
   ]),
 
@@ -73,18 +97,21 @@ export const Animations = {
     state('start', style({
       width: '0%',
       opacity: '0',
-      display: 'none'
     })),
     state('end', style({
       width: '100%',
       opacity: '1',
-      display: 'block'
     })),
     transition('start => end', [
-      animate('400ms 200ms')
+      animate('400ms 500ms linear')
     ]),
     transition('end => start', [
-      animate(300)
-    ]),
-  ]),
+      animate(300, keyframes([
+        style({width: '100%', offset: 0}),
+        style({opacity: '1', offset: 0}),
+        style({width: '0%', offset: 1}),
+        style({opacity: '0', offset: 1}),
+      ]))
+    ])
+  ])
 };
