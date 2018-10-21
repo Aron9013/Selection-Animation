@@ -3,17 +3,20 @@ import {animate, keyframes, state, style, transition, trigger} from "@angular/an
 export const Animations = {
   toggleText: trigger('toggleText', [
       state('open', style({
-        height: '*'
+        height: '*',
+        opacity: '1',
+        display: 'block'
       })),
       state('close', style({
         height: '0',
+        opacity: '0',
         display: 'none'
       })),
       transition('open => close', [
         animate(300)
       ]),
       transition('close => open', [
-        animate('300ms 900ms linear')
+        animate('300ms 600ms linear')
       ])
     ]),
 

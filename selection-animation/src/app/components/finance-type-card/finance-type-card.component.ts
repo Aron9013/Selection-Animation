@@ -51,11 +51,9 @@ export class FinanceTypeCardComponent implements OnInit {
     this._selectedFinanceTypeId = financeTypeId;
 
     this.hideOtherCards();
-    this.moveCard()
   }
 
   public backToSelection(): void {
-    this.moveCard()
     this.hideOtherCards();
     this.cardToggle = (this.cardToggle === 'open' ? 'close' : 'open');
   }

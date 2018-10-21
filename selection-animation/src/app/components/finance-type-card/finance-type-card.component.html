@@ -4,6 +4,7 @@
        (click)="selectFinanceType(financeType.id, $event)"
        [ngClass]="{'isOpened': financeType.isSelected}"
        [@hideCard]="financeType.isVisible ? 'visible' : 'hidden'"
+       (@hideCard.start)="moveCard()"
        [@moveCard]="{ value: financeType.isSelected ? 'end' : 'start', params: {cardXPosition: cardXPosition, cardYPosition: cardYPosition}}">
     <div class="d-flex flex-column p-4 card-container" [@toggleCard]="cardToggle">
       <div class="d-flex justify-content-between">
